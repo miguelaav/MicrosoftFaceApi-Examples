@@ -1,0 +1,15 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div >
+    {{ form.file }}
+    <p class="help-block"></p>
+    </div>
+
+    <button type="submit" >Submit</button>
+</form>
+
+{% endblock %}

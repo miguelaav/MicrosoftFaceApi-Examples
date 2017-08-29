@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Happy or Mad</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/font-awesome.min.css' %}" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+            <h1>
+                  <span class="happy"><i class="fa fa-smile-o fa-2x"></i>Happy</span>
+                  <br/>
+                  <span class="or">Or </span>
+                  <span class="not">Sad </span>
+                  <i class="fa fa-frown-o fa-2x not"></i>
+            </h1>
+    </header>
+
+    <div class="container">
+        <div class="body-content">
+                {% block content %}{% endblock %}
+        </div>
+    </div>
+
+    <hr />
+    
+  </div>
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>

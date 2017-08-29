@@ -1,0 +1,36 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<table>
+  <tr>
+    <td>
+      {% if allData %}
+        <pre>{{ allData }}</pre>
+      {% endif %}
+    </td>
+    <td>
+{% if image %}
+   <img src="data:image/png;base64,{{ image }}">
+{% endif %}
+
+
+{% if ishappy > 0 %}
+   <script>
+       document.addEventListener('DOMContentLoaded', function () {
+           document.getElementsByTagName('h1')[0].classList.add('happy');
+       })
+   </script>
+{% else %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementsByTagName('h1')[0].classList.add('sad');
+        })
+   </script>
+{% endif %}
+
+
+<a href="{% url 'home' %}">Do it again</a>
+</td>
+</tr>
+</table>
+{% endblock %}
