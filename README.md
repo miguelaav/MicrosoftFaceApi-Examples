@@ -4,19 +4,24 @@ Algunos ejemplos para poner en marcha los ejemplos publicos de Microsoft relacio
 
 Ejemplo #1
 
-El ejemplo mas simple esta disponible en la pagina de documentacion de microsoft sin embargo he creado una cuenta en github para su descarga y puesta en funcionamiento de forma más simple.
+El ejemplo mas simple esta disponible en la pagina de documentacion de microsoft sin embargo he creado una cuenta en github para su descarga y puesta en funcionamiento de forma más simple. Github: https://github.com/miguelaav/MicrosoftFaceApi-Examples
 
-Github: https://github.com/miguelaav/MicrosoftFaceApi-Examples
+Requerimientos tener instalado:
+python 2.7
+
+Pasos:
+
+git clone https://github.com/miguelaav/MicrosoftFaceApi-Examples
 
 cd face-api/
 
-Es necesario agregar en el archivo detect_faces.py las lineas 8 y 18 para agregar la api key y el endpoint
+Es necesario agregar en el archivo detect_faces.py en las lineas 8 y 18  la api key y el endpoint
 
 subscription_key = '0def8ac866dc4fa39b43ce49b24ef568'
 
 uri_base = 'https://westcentralus.api.cognitive.microsoft.com/face/v1.0'
 
-Ejecutar la aplicación
+Para ejecutar la aplicación, escribir el siguiente comando
 
 python detect_faces.py
 
